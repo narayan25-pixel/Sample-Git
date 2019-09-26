@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<title>Title</title>
+
+<style>
+.form{
+    color: black;
+    border:1px solid black;
+    margin-left: 350px;
+    width:400px;
+}
+.button{
+
+    margin-left: 150px;
+    color:blue;
+
+}
+::placeholder {
+
+    color: red;
+}
+
+
+.title{
+
+    color:orangered;
+}
+
+
+
+
+
+</style>
+
+</head>
+<body>
+    <form class="form">
+     <center>
+     <div class="title"><h2>Registration form</h2></div>
+     </center>
+
+    <div class="form-group">
+      <label for="userid"><span style="color: red">*</span>userid</label>
+      <input type="text" name="userid" id="userid" class="form-control" placeholder="required and must be of length 5 to 12" aria-describedby="helpId" onkeyup="useridcheck()" required>
+      <small id="userId1" class="text-muted"></small>
+    </div>
+
+
+    
+    
+
+
+    <div class="form-group">
+            <label for="password"><span style="color: red">*</span>password</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="required and must be of length 7 to 12" aria-describedby="helpId" onkeyup="passwordcheck()" required>
+            <small id="password1" class="text-muted"></small>
+          </div>
+
+
+
+          <div  class="form-group">
+                <label for="confirmpassword"><span style="color: red">*</span>confirm password</label>
+                <input type="text" name="confirmpassword" id="confirmpassword" class="form-control" placeholder="confirm password" aria-describedby="helpId" required>
+                <small id="helpId" class="text-muted"></small>
+              </div>
+              <div class="form-group">
+                <label for="name"><span style="color: red">*</span>Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="required and alphabates only" aria-describedby="helpId" onkeyup="namecheck()" required>
+                <small id="nameid" class="text-muted"></small>
+              </div>
+              <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" class="form-control" placeholder="optional" aria-describedby="helpId">
+                <small id="helpId" class="text-muted"></small>
+              </div>
+
+
+             
+              <p>
+                    <label ><span style="color: red">*</span>country:</label>
+                    <select id = "myList">
+                      <option value = "1">india</option>
+                      <option value = "2">bangladesh</option>
+                      <option value = "3">uk</option>
+                      <option value = "4">france</option>
+                    </select>
+                 </p>
+
+
+              <div class="form-group">
+                <label for="zipcode"><span style="color: red">*</span>zip code</label>
+                <input type="number" name="zipcode" id="zipcode" class="form-control" placeholder="numaric only" aria-describedby="helpId" onkeyup="zipcheck()"  required>
+                <small id="zipId" class="text-muted"></small>
+              </div>
+
+
+              <div class="form-group">
+                <label for="email"><span style="color: red">*</span>Enter email</label>
+                <input type="text" name="email" id="email" class="form-control" placeholder="required must be a valid email" aria-describedby="helpId" onkeyup="emailcheck()" required>
+                <small id="emailid" class="text-muted"></small>
+                
+                 
+                
+              </div>
+              
+              <label for="gender" >sex</label>
+              <input type="radio" name="gender" value="gender" checked>Male
+              <input type="radio" name="gender" value="gender" checked>Female<br>
+              
+              
+              
+              
+              <label for="language" required>Enter your language</label>
+              <input type="checkbox" name="language" value="english" checked>English
+              <input type="checkbox" name="language" value="nonenglish" checked>Non english<br>
+            
+
+              
+
+
+                  <div class="form-group">
+                        <label for="dateofjoining"><span style="color: red">*</span>enter your date of joining</label>
+                        <input type="date" name="dateofjoining" id="dateofjoining" class="form-control" placeholder="date of joining"min="2000-01-02" datecheck() aria-describedby="helpId">
+                        <small id="dateId" class="text-muted"></small>
+                      </div>
+
+
+                      
+
+
+                      About
+                      <textarea rows="4" cols="50" placeholder="optional"></textarea>
+                      
+                      
+
+
+                   <div class="button">
+                      <input type="submit" value="submit" onclick="validateForm()" style="color: blue" >
+
+                    </div>
+    
+
+
+
+                      <script>
+
+                      // var x = document.getElementById("name").value;
+                      // var y= document.getElementById("password").value;
+                      // var z= document.getElementById("confirmpassword").value;
+                      // var w= document.getElementById("userid").value;
+                      // var v= document.getElementById("dateofjoining").value;
+                      // var u= document.getElementById("email").value;
+                      // var d= document.getElementById("zipcode").value;
+                      
+                      function validateForm() {
+                      var x = document.getElementById("name").value;
+                      var y= document.getElementById("password").value;
+                      var z= document.getElementById("confirmpassword").value;
+                      var w= document.getElementById("userid").value;
+                      var v= document.getElementById("dateofjoining").value;
+                      var u= document.getElementById("email").value;
+                      var d= document.getElementById("zipcode").value;
+                    
+                      if (x == "" || y=="" || w=="" || v=="" || u=="" || d=="") {
+                      alert("fill the form accurately");
+                     return false;
+                     } else if(x == "" || y=="" || z!=y || w=="" || v=="" || u=="" || d==""){
+                        
+                        alert("password does not match");
+                     }  else{
+
+                         alert("submitted successfully");
+                     }
+                      }
+
+
+                       
+
+                       function emailcheck(){
+                           var u=document.getElementById("email").value;
+                           var emailexpression=/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+                          var zebra= emailexpression.test(u);
+                          if
+                          (zebra == false){
+                            document.getElementById("emailid").innerHTML="email format is invalid"
+
+                            
+                          }
+                          else if(zebra!=false){
+                            document.getElementById("emailid").innerHTML=""
+                          }
+                        
+                      }
+
+
+                      function namecheck(){
+
+                      var enteredname=document.getElementById("name").value;
+                      var nameexpression=/[a-zA-z]/;
+                      var name1=nameexpression.test(enteredname);
+                      if(name1==false){
+                        document.getElementById("nameid").innerHTML="name format is invalid"
+
+                      }else if(name1!=false){
+                        document.getElementById("nameid").innerHTML=""
+                      }
+
+                      }
+                      function useridcheck(){
+                        var entereduserid=document.getElementById("userid").value;
+                        var useridexpression=/[a-zA-Z]{5,7}/;
+                        var checkuserid=useridexpression.test(entereduserid);
+                        if(checkuserid==false){
+                          document.getElementById("userId1").innerHTML="invalid format"
+
+                        }else{
+                          document.getElementById("userId1").innerHTML=""
+                        }
+                      }
+
+                      function passwordcheck(){
+                        var enteredpassword=document.getElementById("password").value;
+                        var passwordexpression=/([a-zA-Z]{7,12})/;
+                        var checkpassword=passwordexpression.test(enteredpassword);
+                        if(checkpassword==false){
+                          document.getElementById("password1").innerHTML="invalid format"
+
+                        }else{
+                          document.getElementById("password1").innerHTML=""
+                        }
+                      }
+                      function zipcheck(){
+                        var enteredzip=document.getElementById("zipcode").value;
+                        var zipexpression=/[0-9]{7}/;
+                        var checkzip=zipexpression.test(enteredzip);
+                        if(checkzip==false){
+                          document.getElementById("zipId").innerHTML="invalid format"
+
+                        }else{
+                          document.getElementById("zipId").innerHTML=""
+                        }
+                      }
+
+                     function datecheck(){
+                       var date1=new date("09/27/2019");
+                       var date2=document.getElementById("dateofjoining").value;
+                       var difference_in_time=date1.getTime()-date2.getTime();
+                       var difference_of_days=difference_in_time/(1000*3600*24);
+                       if(difference_of_days<6570){
+                       
+                        document.getElementById("dateid").innerHTML="age must be greater than 18"
+
+                       }else{
+                        document.getElementById("dateid").innerHTML=""
+                       }
+
+
+                     }
+                      
+                 
+
+                     
+            
+                      
+                      
+                      </script>
+                      
+                      </form>
+
+                                         
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
