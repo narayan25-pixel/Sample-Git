@@ -1,0 +1,67 @@
+<!-- <app-root></app-root> -->
+<app-createdepartment></app-createdepartment>
+
+<div>
+    <table class="table table-primary  table-hover">
+        <thead>
+            <th>Department</th>
+            <th>Name</th>
+            <th>GroupName</th>
+            <th>ModifiedDate</th>
+          
+        </thead>
+        <tbody>
+        <tr *ngFor="let dep of department4; let i=index">
+        <td> {{dep.department}}</td>
+        <td> {{dep.name}}</td>
+        <td> {{dep.groupName}}</td>
+        <td> {{dep.MoifiedDate}}</td>
+        
+        <td><button id="edit" (click)="edit(i)">Edit</button></td>
+        <td><button id="delete" (click)="deleteEmployee(i)">Delete</button></td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+
+
+
+<div id="updatediv" *ngIf="updatediv">
+    <form #updateDepartmentForm="ngForm" (ngSubmit)="edit()">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Create Department</h3>
+          </div>
+          <div class="panel-body">
+            <div class="form-group">
+              <label for="department">Department Id</label>
+              <input id="department" type="text" class="form-control"
+              name="department" [(ngModel)]="departmentlistfinal.department">
+            </div>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input id="name" type="text" class="form-control"
+                     name="name" [(ngModel)]="departmentlistfinal.name">
+            </div>
+                
+            <div class="form-group">
+              <label for="groupName">GroupName</label>
+              <input id="groupName" type="text" class="form-control"
+                     name="groupName" [(ngModel)]="departmentlistfinal.groupName">
+            </div>
+    
+            <div class="form-group">
+                <label for="MoifiedDate">modified Date</label>
+                <input id="MoifiedDate" type="text" class="form-control"
+                       name="MoifiedDate" [(ngModel)]="departmentlistfinal.MoifiedDate">
+              </div>
+           
+            
+          </div>
+          <div class="panel-footer">
+            <button class="btn btn-primary" type="submit">update</button>
+          </div>
+        </div>
+      </form>
+      </div>
+    
