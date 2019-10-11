@@ -1,0 +1,54 @@
+ db.nestedDocuments.insertMany([{_id:1,item:{name:"ab",code:"123"},qty:15,tags:["A","B","c"]},
+... {_id:2,item:{name:"cd",code:"123"},qty:20,tags:["B"]},
+... {_id:3,item:{name:"ij",code:"456"},qty:15,tags:["A","B"]},
+... {_id:4,item:{name:"xy",code:"456"},qty:30,tags:["B","A"]},
+... {_id:5,item:{name:"mn",code:"000"},qty:55,tags:["A","B","c"]}])
+{ "acknowledged" : true, "insertedIds" : [ 1, 2, 3, 4, 5 ] }
+MongoDB Enterprise > db.nestedDocuments.find()
+{ "_id" : 1, "item" : { "name" : "ab", "code" : "123" }, "qty" : 15, "tags" : [ "A", "B", "c" ] }
+{ "_id" : 2, "item" : { "name" : "cd", "code" : "123" }, "qty" : 20, "tags" : [ "B" ] }
+{ "_id" : 3, "item" : { "name" : "ij", "code" : "456" }, "qty" : 15, "tags" : [ "A", "B" ] }
+{ "_id" : 4, "item" : { "name" : "xy", "code" : "456" }, "qty" : 30, "tags" : [ "B", "A" ] }
+{ "_id" : 5, "item" : { "name" : "mn", "code" : "000" }, "qty" : 55, "tags" : [ "A", "B", "c" ] }
+MongoDB Enterprise >
+
+ db.nestedDocuments.find({"item.name":{$in:["ab","ij","mn"]}}).pretty()
+{
+        "_id" : 1,
+        "item" : {
+                "name" : "ab",
+                "code" : "123"
+        },
+        "qty" : 15,
+        "tags" : [
+                "A",
+                "B",
+                "c"
+        ]
+}
+{
+        "_id" : 3,
+        "item" : {
+                "name" : "ij",
+                "code" : "456"
+        },
+        "qty" : 15,
+        "tags" : [
+                "A",
+                "B"
+        ]
+}
+{
+        "_id" : 5,
+        "item" : {
+                "name" : "mn",
+                "code" : "000"
+        },
+        "qty" : 55,
+        "tags" : [
+                "A",
+                "B",
+                "c"
+        ]
+}
+MongoDB Enterprise >
