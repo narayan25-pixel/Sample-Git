@@ -1,0 +1,6 @@
+C:\Users\ndebnath2\source\repos\shapes_exercise\shapes_exercise\bin\Debug\shapes_exercise.exe.config
+C:\Users\ndebnath2\source\repos\shapes_exercise\shapes_exercise\bin\Debug\shapes_exercise.exe
+C:\Users\ndebnath2\source\repos\shapes_exercise\shapes_exercise\bin\Debug\shapes_exercise.pdb
+C:\Users\ndebnath2\source\repos\shapes_exercise\shapes_exercise\obj\Debug\shapes_exercise.csprojAssemblyReference.cache
+C:\Users\ndebnath2\source\repos\shapes_exercise\shapes_exercise\obj\Debug\shapes_exercise.exe
+C:\Users\ndebnath2\source\repos\shapes_exercise\shapes_exercise\obj\Debug\shapes_exercise.pdb
