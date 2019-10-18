@@ -1,0 +1,6 @@
+C:\Users\ndebnath2\source\repos\bank\bank\bin\Debug\bank.exe.config
+C:\Users\ndebnath2\source\repos\bank\bank\bin\Debug\bank.exe
+C:\Users\ndebnath2\source\repos\bank\bank\bin\Debug\bank.pdb
+C:\Users\ndebnath2\source\repos\bank\bank\obj\Debug\bank.csprojAssemblyReference.cache
+C:\Users\ndebnath2\source\repos\bank\bank\obj\Debug\bank.exe
+C:\Users\ndebnath2\source\repos\bank\bank\obj\Debug\bank.pdb
