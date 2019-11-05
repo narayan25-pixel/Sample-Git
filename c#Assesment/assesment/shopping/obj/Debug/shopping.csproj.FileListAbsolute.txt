@@ -1,0 +1,6 @@
+C:\Users\ndebnath2\source\repos\assesment\shopping\bin\Debug\shopping.exe.config
+C:\Users\ndebnath2\source\repos\assesment\shopping\bin\Debug\shopping.exe
+C:\Users\ndebnath2\source\repos\assesment\shopping\bin\Debug\shopping.pdb
+C:\Users\ndebnath2\source\repos\assesment\shopping\obj\Debug\shopping.csprojAssemblyReference.cache
+C:\Users\ndebnath2\source\repos\assesment\shopping\obj\Debug\shopping.exe
+C:\Users\ndebnath2\source\repos\assesment\shopping\obj\Debug\shopping.pdb
